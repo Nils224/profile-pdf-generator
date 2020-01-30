@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const axios = require("axios");
-const writer = require("./docWriter");
+const writer = require("./writer");
 const pdf = require("./pdfCreator");
 
 const questions = [
