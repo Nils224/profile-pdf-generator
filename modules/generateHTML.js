@@ -1,9 +1,9 @@
 
-const fs = require("fs"); // import fs npm library to write file
-const util = require("util"); // import util npm library to write file
+const fs = require("fs");
+const util = require("util"); 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-const callAPI = require('./callApi'); // import function from callApi.js file
+const callAPI = require('./callApi');
 
 // Colors to set base on users input selected
 const colors = {

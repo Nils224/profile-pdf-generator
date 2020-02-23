@@ -1,6 +1,6 @@
 const askQuestions = require("./modules/askQuestions") 
 
-// Initialize function to start the application
+// Initialise function to start the application
 
 function init(){
     askQuestions();
