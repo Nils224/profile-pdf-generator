@@ -34,10 +34,12 @@ async function callAPI(username, colorChosen){
         await page.waitForSelector('main');
 
         await page.pdf(options);
-        // await page.screenshot({ path: 'screenshot.png', fullPage: true });
+        await page.screenshot({ path: 'screenshot.png', fullPage: true });
 
         await page.close();
         await browser.close();
+
+        console.log("pdf compiled")
     }
 
     //calling the function to create PDF
