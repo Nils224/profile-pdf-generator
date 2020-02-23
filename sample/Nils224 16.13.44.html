@@ -1,32 +1,4 @@
-const colors = {
-  green: {
-    wrapperBackground: "#E6E1C3",
-    headerBackground: "#C1C72C",
-    headerColor: "black",
-    photoBorderColor: "#black"
-  },
-  blue: {
-    wrapperBackground: "#5F64D3",
-    headerBackground: "#26175A",
-    headerColor: "white",
-    photoBorderColor: "#73448C"
-  },
-  pink: {
-    wrapperBackground: "#879CDF",
-    headerBackground: "#FF8374",
-    headerColor: "white",
-    photoBorderColor: "#FEE24C"
-  },
-  red: {
-    wrapperBackground: "#DE9967",
-    headerBackground: "#870603",
-    headerColor: "white",
-    photoBorderColor: "white"
-  }
-};
-
-function generateHTML(color, userInfo, stars) {
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
@@ -52,7 +24,7 @@ function generateHTML(color, userInfo, stars) {
          height: 100%;
          }
          .wrapper {
-         background-color: ${colors[color].wrapperBackground};
+         background-color: #5F64D3;
          padding-top: 100px;
          }
          body {
@@ -94,8 +66,8 @@ function generateHTML(color, userInfo, stars) {
          display: flex;
          justify-content: center;
          flex-wrap: wrap;
-         background-color: ${colors[color].headerBackground};
-         color: ${colors[color].headerColor};
+         background-color: #26175A;
+         color: white;
          padding: 10px;
          width: 95%;
          border-radius: 6px;
@@ -106,7 +78,7 @@ function generateHTML(color, userInfo, stars) {
          border-radius: 50%;
          object-fit: cover;
          margin-top: -75px;
-         border: 6px solid ${colors[color].photoBorderColor};
+         border: 6px solid #73448C;
          box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
          }
          .photo-header h1, .photo-header h2 {
@@ -149,8 +121,8 @@ function generateHTML(color, userInfo, stars) {
          .card {
            padding: 20px;
            border-radius: 6px;
-           background-color: ${colors[color].headerBackground};
-           color: ${colors[color].headerColor};
+           background-color: #26175A;
+           color: white;
            margin: 20px;
          }
          
@@ -171,46 +143,52 @@ function generateHTML(color, userInfo, stars) {
           } 
          }
       </style>
-      </head>
-<body>
-    <div class="wrapper">
-            <div class="photo-header">
-                <img src="${userInfo.avatar_url}">
-                <h1>Hi,<br>My name is ${userInfo.name}</h1>
-                <h4>Currently @ ${userInfo.company}</h4>
-                <div class="links-nav">
-                    <a class="nav-link" href="https://www.google.com/maps/place/${encodeURI(userInfo.location)}"><h6>${userInfo.location}</h6></a>
-                    <a class="nav-link" href="${userInfo.html_url}"><h6>Github</h6></a>
-                    <a class="nav-link" href="${userInfo.blog}"><h6>Blog</h6></a>
-                </div>
-            </div>
-        <main>
-        <div class="container">
-                <h2 class="col">${userInfo.bio}</h2>
-            <div class="row">
-                <div class="card col">
-                    <h2>Public Repositories ${userInfo.public_repos}</h2>
-                </div>
-                <div class="card col">
-                    <h2>Followers ${userInfo.followers}</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="card col">
-                    <h2 class=>Github stars ${stars}</h2>
-                </div>
-                <div class="card col">
-                    <h2>Following ${userInfo.following}</h2>
-                </div>
-            </div>
+      <body>
+      <div class="wrapper">
+    
+        <div class="photo-header">
+          <img src="https://avatars1.githubusercontent.com/u/55589090?v=4" alt="Portrait">
+          <h1>Hi !</h1>
+          <h2>My name is Nilesh Patel !</h2>
+          <p class="workExp-date">I am currently working at Home</p>
+          <div class="links-nav">
+            <a href="https://www.google.com/maps/place/Kingswinford" target="_blank" class="nav-link"><i class="fas fa-location-arrow"> Kingswinford</i></a>
+            <a href="https://github.com/Nils224" target="_blank" class="nav-link"><i class="fab fa-github"> GitHub</i></a>
+            <a href="https://nils224.github.io/" target="_blank" class="nav-link"><i class="fas fa-rss"> Blog</i></a>
+          </div>
         </div>
-        </main>
-    </div>
-</body>
-</html>`
-}
+    
+        <main class="container">
+          
+          <div class="row">
+            <div class="col">
+              <h5>Up and coming Web Developer studying at University of Birmingham Full Stack coding program.</h5>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="card col">
+             <h3>Public Repositories</h3>
+             <h4>15</h4>
+            </div>
+            <div class="card col">
+             <h3>Followers</h3>
+             <h4>4</h4>
+            </div>
+          </div>
 
-module.exports = {
-  colors: colors,
-  generateHTML: generateHTML
-}
+          <div class="row">
+            <div class="card col">
+             <h3>GitHub Stars</h3>
+             <h4>3</h4>
+            </div>
+            <div class="card col">
+             <h3>Following</h3>
+             <h4>1</h4>
+            </div>
+          </div>
+
+        </main>  
+      </div>
+    </body>    
+</html>
